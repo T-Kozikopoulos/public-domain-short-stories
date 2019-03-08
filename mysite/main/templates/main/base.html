@@ -1,0 +1,28 @@
+{% load static %}
+
+<head>
+    <!-- Prism CSS -->
+    <link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Short Stories</title>
+</head>
+
+<!--<body style="background-color: beige">-->
+<body style="background-color: #e8e8e1">
+    <!-- Navbar -->
+    {% include 'main/includes/navbar.html' %}
+    <br>
+    <!-- Toast Messages -->
+    {% include 'main/includes/alerts.html' %}
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>

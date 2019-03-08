@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="row ">
+        {% for story in stories %}
+            <div class="col s12 m6">
+                <div class="card hoverable blue-grey lighten-4">
+                    <div class="card-content white-text">
+                        <span class="card-title"><b>{{ story.title }}</b></span>
+                        <span class="card-title">
+                            {{ story.author }}
+                            <i style="font-size:70%">({{ story.publish_date }})</i>
+                        </span>
+
+                        <p><br><a href=""> Read More...</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

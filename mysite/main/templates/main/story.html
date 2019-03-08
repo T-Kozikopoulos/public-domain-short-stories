@@ -1,0 +1,39 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col s12, m8, l8">
+            <h3>{{ story.title}}</h3>
+            <p>Published in {{ story.publish_date }}</p>
+            <span class="flow-text">{{ story.content | safe }}</span>
+        </div>
+
+        <!-- Side Bar -->
+        <div class="col s12 m4 l4">
+            <ul class="collapsible popout">
+                {% for story in sidebar %}
+                    {% if forloop.counter0 == this_story_idx %}
+                        <li class="active">
+                            <div class="collapsible-header blue-grey lighten-4">
+                                {{ story.title }}<br>(currently reading)
+                            </div>
+                        </li>
+                    {% else %}
+                        <li>
+                            <div class="collapsible-header blue-grey lighten-4">{{ story.title }}</div>
+                            <div class="collapsible-body blue-grey lighten-3">
+                                <p>
+                                    <a href="/{{ story.slug }}">
+                                        <button class="btn waves-effect waves-light right-align"
+                                                style="background-color: light teal; color: black">Go
+                                        </button>
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
