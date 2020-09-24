@@ -1,8 +1,7 @@
 # public-domain-short-stories
 Website collection of the best out-of-copyright short stories. Made with Django and designed with MaterializeCSS.
 
-Check out the website at coolshortstories.herokuapp.com
-
+Check out the website at [coolshortstories.herokuapp.com](coolshortstories.herokuapp.com).
 About
 
 ![About](https://i.ibb.co/G2wSfKZ/about.png)
